@@ -8,8 +8,8 @@ public class CoinCounterUI : MonoBehaviour
     [SerializeField] private TextMeshProUGUI current;
     [SerializeField] private TextMeshProUGUI toUpdate;
     [SerializeField] private Transform coinTextContainer;
-    [SerializeField] private float duration;
-    [SerializeField] private Ease animationCurve;
+    [SerializeField] private float duration = 0.4f;
+    [SerializeField] private Ease animationCurve = Ease.OutQuad;
 
     private float containerInitPosition;
     private float moveAmount;

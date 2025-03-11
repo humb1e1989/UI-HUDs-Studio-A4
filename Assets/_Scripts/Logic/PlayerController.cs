@@ -1,11 +1,14 @@
-using System.Linq;
+﻿using System.Linq;
 using Unity.Cinemachine;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
     [Header("References")]
     [SerializeField] private InputManager inputManager;
+    [SerializeField] private Slider speedSlider; // 新添加的滑块引用
+
     [Header("Movement Parameters")]
     [SerializeField] private float maxSpeed;
     [SerializeField] private float acceleration;
@@ -14,6 +17,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float airControl;
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private int jumpCount;
+
     [Header("Physics Materials")]
     [SerializeField] private PhysicsMaterial rough;
     [SerializeField] private PhysicsMaterial smooth;
@@ -26,15 +30,49 @@ public class PlayerController : MonoBehaviour
 
     private RaycastHit rightHit;
     private RaycastHit leftHit;
+
     private void Awake()
     {
-        inputManager.OnMove.AddListener(MovePlayer);
-        inputManager.OnJump.AddListener(Jump);
-        inputManager.OnDash.AddListener(Dash);
         rb = GetComponent<Rigidbody>();
         col = GetComponent<Collider>();
         freeLookCamera = FindAnyObjectByType<CinemachineCamera>();
     }
+
+    private void Start()
+    {
+        // 注册输入事件监听器
+        if (inputManager != null)
+        {
+            inputManager.OnMove.AddListener(MovePlayer);
+            inputManager.OnJump.AddListener(Jump);
+            inputManager.OnDash.AddListener(Dash);
+        }
+
+        // 设置滑块初始值并添加监听器
+        if (speedSlider != null)
+        {
+            speedSlider.value = maxSpeed;
+            speedSlider.onValueChanged.AddListener(UpdatePlayerMaxSpeed);
+        }
+    }
+
+    private void OnDestroy()
+    {
+        // 移除输入事件监听器
+        if (inputManager != null)
+        {
+            inputManager.OnMove.RemoveListener(MovePlayer);
+            inputManager.OnJump.RemoveListener(Jump);
+            inputManager.OnDash.RemoveListener(Dash);
+        }
+
+        // 移除滑块监听器
+        if (speedSlider != null)
+        {
+            speedSlider.onValueChanged.RemoveListener(UpdatePlayerMaxSpeed);
+        }
+    }
+
     private void Update()
     {
         transform.rotation = Quaternion.Euler(0, freeLookCamera.transform.rotation.eulerAngles.y, 0);
@@ -75,7 +113,7 @@ public class PlayerController : MonoBehaviour
 
     private void MovePlayer(Vector2 dirn)
     {
-        Vector3 direction = new Vector3(dirn.x, 0f, dirn.y) ;
+        Vector3 direction = new Vector3(dirn.x, 0f, dirn.y);
         Quaternion rotation = Quaternion.LookRotation(transform.forward, Vector3.up);
         Vector3 reorientedDirection = rotation * direction;
         if (IsTouchingGround())
@@ -86,7 +124,6 @@ public class PlayerController : MonoBehaviour
         {
             rb.AddForce(reorientedDirection * acceleration * airControl);
         }
-
     }
 
     private void Jump()
@@ -97,7 +134,7 @@ public class PlayerController : MonoBehaviour
             jumpCount = 0;
         }
 
-        if(jumpCount < doubleJump)
+        if (jumpCount < doubleJump)
         {
             // resetting vertical velocity before applying jump force
             rb.linearVelocity = new Vector3(rb.linearVelocity.x, 0f, rb.linearVelocity.z);
@@ -111,5 +148,17 @@ public class PlayerController : MonoBehaviour
         isDashing = true;
         rb.linearVelocity = Vector3.zero;
         rb.AddForce(transform.forward * dashForce, ForceMode.Impulse);
+    }
+
+    public void UpdatePlayerMaxSpeed(float speed)
+    {
+        Debug.Log($"Setting player speed to: {speed}");
+        maxSpeed = speed;
+    }
+
+    // 获取当前最大速度的方法
+    public float GetMaxSpeed()
+    {
+        return maxSpeed;
     }
 }

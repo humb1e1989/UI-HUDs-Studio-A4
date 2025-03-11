@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Events;
 
 public class InputManager : MonoBehaviour
@@ -6,25 +6,31 @@ public class InputManager : MonoBehaviour
     public UnityEvent<Vector2> OnMove = new();
     public UnityEvent OnJump = new();
     public UnityEvent OnDash = new();
-    void Update()
+    public UnityEvent OnSettingsMenu = new();
+
+    private void Update()
     {
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            OnSettingsMenu?.Invoke();
+        }
+
+        // 如果设置菜单激活，不处理其他输入
+        if (GameManager.Instance.IsSettingsMenuActive) return;
+
+        // 移动输入
         Vector2 input = Vector2.zero;
-        if (Input.GetKey(KeyCode.W))
+        if (Input.GetKey(KeyCode.W)) input.y += 1;
+        if (Input.GetKey(KeyCode.S)) input.y -= 1;
+        if (Input.GetKey(KeyCode.A)) input.x -= 1;
+        if (Input.GetKey(KeyCode.D)) input.x += 1;
+
+        if (input != Vector2.zero)
         {
-            input += Vector2.up;
+            OnMove?.Invoke(input.normalized);
         }
-        if (Input.GetKey(KeyCode.S))
-        {
-            input += Vector2.down;
-        }
-        if (Input.GetKey(KeyCode.A))
-        {
-            input += Vector2.left;
-        }
-        if (Input.GetKey(KeyCode.D))
-        {
-            input += Vector2.right;
-        }
+
+        // 跳跃和冲刺输入
         if (Input.GetKeyDown(KeyCode.Space))
         {
             OnJump?.Invoke();
@@ -34,6 +40,5 @@ public class InputManager : MonoBehaviour
         {
             OnDash?.Invoke();
         }
-        OnMove?.Invoke(input.normalized);
     }
 }
