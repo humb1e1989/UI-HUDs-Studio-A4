@@ -1,8 +1,6 @@
 # Unity UI Studio 4 🎮
 
-An interactive project showcasing **fundamental Unity UI system functionalities** with aesthetically pleasing game interface elements. ✨
-
-![Game Screenshot](screenshots/gameplay.png)
+> An interactive project showcasing **fundamental Unity UI system functionalities** with aesthetically pleasing game interface elements. ✨
 
 ## Project Overview 🔍
 
