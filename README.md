@@ -1,6 +1,6 @@
 # Unity UI Studio 4 🎮
 
-An interactive project showcasing fundamental Unity UI system functionalities with aesthetically pleasing game interface elements. ✨
+An interactive project showcasing **fundamental Unity UI system functionalities** with aesthetically pleasing game interface elements. ✨
 
 ![Game Screenshot](screenshots/gameplay.png)
 
@@ -15,37 +15,37 @@ Based on the Third Person Character Controller, this project demonstrates variou
 ## Key Features 🚀
 
 ### Animated Coin Counter 💰
-When collecting coins, the counter updates with a fluid animation effect, enhancing game feedback. Implemented using masks and the DoTween animation library for smooth number transitions.
+When collecting coins, the counter updates with a **fluid animation effect**, enhancing game feedback. Implemented using masks and the DoTween animation library for smooth number transitions.
 
 ### Settings Menu ⚙️
-Press P to open/close the settings menu. Features include:
-- ▶️ Pause/Resume gameplay
-- 🎚️ Adjust player movement speed via slider
-- 🚪 Exit game option
+Press `P` to open/close the settings menu. Features include:
+- ▶️ **Pause/Resume** gameplay
+- 🎚️ **Adjust player movement speed** via slider
+- 🚪 **Exit game** option
 
 ### In-World Tutorial Board 🌍
-A 3D board displaying game controls intuitively, implemented using World Space Canvas. Includes instructions for:
-- 👀 Look - Camera control
-- 🏃 Move - Movement controls (WASD)
-- 🦘 Jump - Jumping (Spacebar)
-- 💨 Dash - Sprint (Shift key)
+A 3D board displaying game controls intuitively, implemented using **World Space Canvas**. Includes instructions for:
+- 👀 **Look** - Camera control
+- 🏃 **Move** - Movement controls (`WASD`)
+- 🦘 **Jump** - Jumping (`Spacebar`)
+- 💨 **Dash** - Sprint (`Shift` key)
 
 ## Technical Highlights 💡
 
-- 🎬 Smooth UI animations using DoTween
-- 🎭 Advanced UI effects with Canvas masks
-- 🌐 Integration of World Space Canvas with 3D environment
-- 📐 Practical application of layout components (horizontal/vertical/grid)
-- ⏯️ Implementation of game pause and resume functionality
-- 🧩 Game management using the Singleton pattern
+- 🎬 Smooth UI animations using **DoTween**
+- 🎭 Advanced UI effects with **Canvas masks**
+- 🌐 Integration of **World Space Canvas** with 3D environment
+- 📐 Practical application of **layout components** (horizontal/vertical/grid)
+- ⏯️ Implementation of game **pause and resume** functionality
+- 🧩 Game management using the **Singleton pattern**
 
 ## How to Play 🎲
 
-1. **Movement** - Use WASD keys to control character movement 🏃
-2. **Jump** - Press Spacebar to jump (double jump supported) 🦘
-3. **Dash** - Press Shift key for quick sprint 💨
+1. **Movement** - Use `WASD` keys to control character movement 🏃
+2. **Jump** - Press `Spacebar` to jump (*double jump supported*) 🦘
+3. **Dash** - Press `Shift` key for quick sprint 💨
 4. **Camera** - Move mouse to control camera view 🔄
-5. **Settings** - Press P to open/close settings menu ⚙️
+5. **Settings** - Press `P` to open/close settings menu ⚙️
 6. **Collect Coins** - Touch coins to increase score 💰
 
 ## Development Process 📝
@@ -60,12 +60,12 @@ Progressive Git commit strategy was employed during development, with key milest
 
 ## Video Demonstration 🎬
 
-[Click to watch demo video](https://youtu.be/demo-link) 📺
+[**Click to watch demo video**](https://youtu.be/demo-link) 📺
 
 ## Acknowledgements 🙏
 
-- 🎭 DoTween for UI animations
-- 🏃 Built upon Third Person Character Controller
+- 🎭 **DoTween** for UI animations
+- 🏃 Built upon **Third Person Character Controller**
 - 👨‍🏫 Special thanks to course materials and guidance
 
 ---
