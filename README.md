@@ -71,3 +71,5 @@ Progressive Git commit strategy was employed during development, with key milest
 ---
 
 *COSC 416 - Unity Game Development - Spring 2025* 🎓
+
+**Author:** LostboiSurviveAlone 👨‍💻
