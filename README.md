@@ -60,10 +60,6 @@ Progressive Git commit strategy was employed during development, with key milest
 5. 📋 Adding in-world tutorial board
 6. 🔧 Optimizing UI layout and user experience
 
-## Video Demonstration 🎬
-
-[**Click to watch demo video**](https://youtu.be/demo-link) 📺
-
 ## Acknowledgements 🙏
 
 - 🎭 **DoTween** for UI animations
