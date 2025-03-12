@@ -12,7 +12,9 @@ Based on the Third Person Character Controller, this project demonstrates variou
 
 ## Video Demonstration 🎬
 
-[**Click to watch demo video**](https://youtu.be/demo-link) 📺
+<video src="https://github.com/user-attachments/assets/ff9e58e6-1def-497b-9e81-979ae70aec98"></video> 📺
+
+
 
 ## Key Features 🚀
 
