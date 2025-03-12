@@ -10,6 +10,10 @@ Based on the Third Person Character Controller, this project demonstrates variou
 - **Fully Functional Settings Menu** ⚙️ - Pause game and adjust player speed
 - **In-World Tutorial Board** 📋 - Intuitive display of game controls
 
+## Video Demonstration 🎬
+
+[**Click to watch demo video**](https://youtu.be/demo-link) 📺
+
 ## Key Features 🚀
 
 ### Animated Coin Counter 💰
