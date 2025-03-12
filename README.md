@@ -1,32 +1,73 @@
-# Third Person Platformer
+# Unity UI Studio 4 🎮
 
-A simple third person character controller in Unity
+> An interactive project showcasing **fundamental Unity UI system functionalities** with aesthetically pleasing game interface elements. ✨
 
-## Demo
+## Project Overview 🔍
 
-https://github.com/user-attachments/assets/91485280-b86b-4c82-ac11-2a5107730e94
+Based on the Third Person Character Controller, this project demonstrates various implementations of the Unity UI system, including:
 
-## Cloning & Setting Up the Project
+- **Animated Coin Counter** ⭐ - Score display with smooth sliding effects using DoTween
+- **Fully Functional Settings Menu** ⚙️ - Pause game and adjust player speed
+- **In-World Tutorial Board** 📋 - Intuitive display of game controls
 
-1. Ensure you have
-	- **Unity Hub** (Download: [Unity Hub](https://unity.com/download))
-	- **Unity Version** (6000.0.31f1)
-	- **Git** ([Download Git](https://git-scm.com/)) or **Github Desktop** ([Download Github Desktop](https://desktop.github.com/download/))
-2. Clone the project via [Git](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository?tool=cli) or [Github Desktop](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository?tool=desktop)
-3. Open **Unity Hub**
-4. Click **"Open"** and select the cloned project folder (with Assets, ProjectSettings, Packages)
+## Video Demonstration 🎬
 
-## Features
+[**Click to watch demo video**](https://youtu.be/demo-link) 📺
 
-- Third Person Camera
-- Move around with WASD
-- Jump, Double Jump with Space
-- Dash with Shift
-- Collect Coins by moving over them
-- Score Counter on the top right
+## Key Features 🚀
 
-## Credits
+### Animated Coin Counter 💰
+When collecting coins, the counter updates with a **fluid animation effect**, enhancing game feedback. Implemented using masks and the DoTween animation library for smooth number transitions.
 
-Uses coin model from [Quaternius](https://quaternius.com/) (Sourced from [Poly Pizza](https://poly.pizza/m/QHZtj94fvh))
+### Settings Menu ⚙️
+Press `P` to open/close the settings menu. Features include:
+- ▶️ **Pause/Resume** gameplay
+- 🎚️ **Adjust player movement speed** via slider
+- 🚪 **Exit game** option
 
+### In-World Tutorial Board 🌍
+A 3D board displaying game controls intuitively, implemented using **World Space Canvas**. Includes instructions for:
+- 👀 **Look** - Camera control
+- 🏃 **Move** - Movement controls (`WASD`)
+- 🦘 **Jump** - Jumping (`Spacebar`)
+- 💨 **Dash** - Sprint (`Shift` key)
 
+## Technical Highlights 💡
+
+- 🎬 Smooth UI animations using **DoTween**
+- 🎭 Advanced UI effects with **Canvas masks**
+- 🌐 Integration of **World Space Canvas** with 3D environment
+- 📐 Practical application of **layout components** (horizontal/vertical/grid)
+- ⏯️ Implementation of game **pause and resume** functionality
+- 🧩 Game management using the **Singleton pattern**
+
+## How to Play 🎲
+
+1. **Movement** - Use `WASD` keys to control character movement 🏃
+2. **Jump** - Press `Spacebar` to jump (*double jump supported*) 🦘
+3. **Dash** - Press `Shift` key for quick sprint 💨
+4. **Camera** - Move mouse to control camera view 🔄
+5. **Settings** - Press `P` to open/close settings menu ⚙️
+6. **Collect Coins** - Touch coins to increase score 💰
+
+## Development Process 📝
+
+Progressive Git commit strategy was employed during development, with key milestones including:
+1. 🏗️ Setting up basic project structure
+2. 🎨 Importing and configuring UI assets
+3. ✨ Implementing animated coin counter
+4. ⚙️ Creating settings menu functionality
+5. 📋 Adding in-world tutorial board
+6. 🔧 Optimizing UI layout and user experience
+
+## Acknowledgements 🙏
+
+- 🎭 **DoTween** for UI animations
+- 🏃 Built upon **Third Person Character Controller**
+- 👨‍🏫 Special thanks to course materials and guidance
+
+---
+
+*COSC 516 - Unity Game Development - Spring 2025* 🎓
+
+👨‍💻**Author:** **_LostboiSurviveA1one_**
